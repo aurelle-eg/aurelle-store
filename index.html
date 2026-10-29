@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aurelle — elegant jewelry and accessories, thoughtfully chosen for everyday luxury in Egypt.">
+  <meta name="theme-color" content="#f8f4ee">
+  <title>Aurelle | Jewelry & Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">AURELLE — LITTLE LUXURIES, MADE FOR YOU</div>
+  <header class="header">
+    <a class="wordmark" href="#home" aria-label="Aurelle home">AURELLE<span>✦</span></a>
+    <nav aria-label="Main navigation"><a href="#shop">Shop</a><a href="#about">Our story</a><a href="#contact">Contact</a></nav>
+    <button class="bag-trigger" id="open-bag" aria-label="Open shopping bag">BAG <span id="bag-count">0</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE AURELLE EDIT</p>
+        <h1>Quiet luxury.<br><em>Everyday elegance.</em></h1>
+        <p class="intro">Discover jewelry and accessories that make the everyday feel special. Thoughtful details, timeless touches, and pieces that feel uniquely yours.</p>
+        <a class="primary-btn" href="#shop">DISCOVER THE COLLECTION <span>↗</span></a>
+        <p class="hero-footnote">A little glow goes a long way.</p>
+      </div>
+      <div class="hero-visual" aria-label="Abstract luxury editorial artwork">
+        <div class="hero-disc"></div><div class="hero-arch arch-back"></div><div class="hero-arch arch-front"></div>
+        <div class="hero-caption">THE ART OF<br><i>understated</i><br>beauty</div>
+        <div class="hero-seal">A</div>
+      </div>
+    </section>
+
+    <div class="ticker"><span>TIMELESS PIECES</span><b>✦</b><span>THOUGHTFUL DETAILS</span><b>✦</b><span>MADE FOR YOUR MOMENTS</span></div>
+
+    <section class="shop section" id="shop">
+      <div class="section-title">
+        <div><p class="eyebrow">CURATED FOR YOU</p><h2>Find your <em>signature.</em></h2></div>
+        <p>From everyday essentials to pieces worth keeping forever.</p>
+      </div>
+      <div class="filters" aria-label="Filter collection">
+        <button class="filter active" data-filter="All">All pieces</button><button class="filter" data-filter="Jewelry">Jewelry</button><button class="filter" data-filter="Accessories">Accessories</button><button class="filter" data-filter="Gifts">Gift edit</button>
+      </div>
+      <div class="products" id="products"></div>
+      <p class="demo-note">Sample collection and prices shown in EGP. Replace these with your actual products before launch.</p>
+    </section>
+
+    <section class="manifesto" id="about">
+      <div class="manifesto-art"><div class="monogram">A<span>✦</span></div><p>LESS, BUT LOVELIER.</p></div>
+      <div class="manifesto-copy"><p class="eyebrow">THE AURELLE PHILOSOPHY</p><h2>Beauty in the<br><em>little things.</em></h2><p>Aurelle is a celebration of personal style: the necklace you reach for every morning, the bag that goes everywhere, the finishing touch that feels just right.</p><p>We are building a collection for women who love elegance without effort. Every piece should feel special, and every detail should feel considered.</p><a href="#shop" class="underlined">MEET YOUR NEW FAVORITES ↗</a></div>
+    </section>
+
+    <section class="newsletter section" id="contact">
+      <p class="eyebrow">A NOTE FROM AURELLE</p><h2>Something lovely is on its way.</h2><p>Have a question or want to be first to hear about new arrivals? Get in touch.</p>
+      <div class="contact-actions"><a class="primary-btn" id="whatsapp-link" href="https://wa.me/" target="_blank" rel="noopener">CHAT WITH US ON WHATSAPP ↗</a><a class="secondary-btn" id="email-link" href="mailto:hello@aurelle.example">EMAIL AURELLE</a></div>
+      <p class="contact-hint">Before publishing, update the WhatsApp number and email address in <code>script.js</code>.</p>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="wordmark" href="#home">AURELLE<span>✦</span></a><p>Quiet luxury. Everyday elegance.</p><div class="footer-links"><a href="#shop">Shop</a><a href="#about">Our story</a><a href="#contact">Contact</a></div><small>© <span id="year"></span> Aurelle. Made with care.</small></footer>
+
+  <div class="bag-overlay" id="bag-overlay" hidden>
+    <button class="backdrop" id="close-backdrop" aria-label="Close shopping bag"></button>
+    <aside class="bag-panel" role="dialog" aria-modal="true" aria-labelledby="bag-title">
+      <div class="bag-heading"><h2 id="bag-title">Your bag <span id="bag-count-title">(0)</span></h2><button id="close-bag" class="close" aria-label="Close">×</button></div>
+      <div class="bag-items" id="bag-items"><p class="empty">Your bag is waiting for something lovely.</p></div>
+      <div class="bag-bottom"><div class="subtotal"><span>Subtotal</span><strong id="subtotal">EGP 0</strong></div><p>Delivery fees are not included. Orders are not submitted until you connect a real checkout or order process.</p><button class="primary-btn checkout" id="checkout">ORDER VIA WHATSAPP ↗</button></div>
+    </aside>
+  </div>
+  <div class="toast" id="toast" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
